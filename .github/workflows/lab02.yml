@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo Hello
-      - run: pip install nbconvert pint matplotlib scipy
+      - run: pip install nbconvert pint matplotlib scipy ipykernel
       - uses: actions/checkout@v4
       - run: sudo apt-get install pandoc texlive-xetex
       - run: python -m nbconvert --to pdf --execute lab2/lab_2.ipynb
-      - uses: action/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
           path: lab2/lab_2.pdf
