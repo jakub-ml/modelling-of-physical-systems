@@ -10,5 +10,5 @@ jobs:
       - run: sudo apt-get install pandoc texlive-xetex
       - run: python -m nbconvert --to pdf --execute lab_2.ipynb
       - uses: action/upload artifact@v4
-      - with:
+        with:
           path: lab_2.pdf
