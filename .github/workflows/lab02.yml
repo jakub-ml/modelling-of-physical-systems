@@ -4,5 +4,6 @@ jobs:
 test:
   runs-on: ubuntu-latest
   steps:
-    -run: echo Hello
-    -run: pip install nbconvert
+    - run: echo Hello
+    - run: pip install nbconvert
+    - run:  python -m nbconvert --to lab_2.ipynb.pdf
