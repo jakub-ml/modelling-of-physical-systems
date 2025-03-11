@@ -8,4 +8,7 @@ jobs:
       - run: pip install nbconvert
       - uses: actions/checkout@v4
       - run: sudo apt-get install pandoc texlive-xetex
-      - run: python -m nbconvert --to pdf lab_2.ipynb
+      - run: python -m nbconvert --to pdf lab2/lab_2.ipynb
+      - uses: action/upload artifact@v5
+      - with:
+          path: lab2/lab_2.ipynb
