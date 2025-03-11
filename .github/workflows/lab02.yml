@@ -1,10 +1,10 @@
 name: lab02
 on: push
 jobs:
-test:
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkoutev5
-    - run: echo Hello
-    - run: pip install nbconvert
-    - run:  python -m nbconvert --to pdf lab_2.ipynb
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkoutev5
+      - run: echo Hello
+      - run: pip install nbconvert
+      - run:  python -m nbconvert --to pdf lab_2.ipynb
