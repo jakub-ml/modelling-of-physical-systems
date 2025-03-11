@@ -8,4 +8,4 @@ jobs:
       - run: echo Hello
       - run: pip install nbconvert
       - run: python -m nbconvert --to pdf lab_2.ipynb
-      - run: sudo apt-get install pandoc
+      - run: sudo apt-get install pandoc texlive-xetex
