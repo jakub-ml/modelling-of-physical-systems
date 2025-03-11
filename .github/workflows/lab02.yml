@@ -7,7 +7,7 @@ jobs:
       - run: echo Hello
       - run: pip install nbconvert pint matplotlib scipy ipykernel
       - uses: actions/checkout@v4
-      - run: sudo apt-get install pandoc texlive-xetex
+      - run: sudo apt-get install pandoc texlive-xetex inkscape
       - run: python -m nbconvert --to pdf --execute lab2/lab_2.ipynb
       - uses: actions/upload-artifact@v4
         with:
