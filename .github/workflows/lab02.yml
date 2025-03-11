@@ -4,8 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
       - run: echo Hello
       - run: pip install nbconvert
-      - run: python -m nbconvert --to pdf lab_2.ipynb
+      - uses: actions/checkout@v4
       - run: sudo apt-get install pandoc texlive-xetex
+      - run: python -m nbconvert --to pdf lab_2.ipynb
