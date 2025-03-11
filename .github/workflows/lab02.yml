@@ -9,6 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get install pandoc texlive-xetex
       - run: python -m nbconvert --to pdf --execute lab2/lab_2.ipynb
-      - uses: action/upload artifact@v4
+      - uses: action/upload artifact@v5
         with:
           path: lab2/lab_2.pdf
