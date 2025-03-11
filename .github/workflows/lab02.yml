@@ -4,7 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkoutev5
+      - uses: actions/checkout@v4
       - run: echo Hello
       - run: pip install nbconvert
-      - run:  python -m nbconvert --to pdf lab_2.ipynb
+      - run: python -m nbconvert --to pdf lab_2.ipynb
+      - run: sudo apt-get install pandoc
