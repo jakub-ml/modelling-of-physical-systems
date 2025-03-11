@@ -5,4 +5,4 @@ test:
   runs-on: ubuntu-latest
   steps:
     -run: echo Hello
-    -run: pip install 
+    -run: pip install nbconvert
