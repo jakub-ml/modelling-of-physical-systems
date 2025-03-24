@@ -1,0 +1,14 @@
+name: lab02
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo Hello
+      - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils
+      - uses: actions/checkout@v4
+      - run: sudo apt-get install pandoc texlive-xetex inkscape
+      - run: python -m nbconvert --to pdf --execute lab2/lab_2.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: lab2/lab_2.pdf
