@@ -1,4 +1,4 @@
-name: lab02
+name: lab_03
 on: push
 jobs:
   test:
@@ -7,6 +7,7 @@ jobs:
       - run: echo Hello
       - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils
       - uses: actions/checkout@v4
+      - run: sudo apt-get install update
       - run: sudo apt-get install pandoc texlive-xetex inkscape
       - run: python -m nbconvert --to pdf --execute lab_3/main.ipynb
       - uses: actions/upload-artifact@v4
