@@ -1,4 +1,4 @@
-name: lab_03
+name: lab_04
 on: push
 jobs:
   test:
@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get update
       - run: sudo apt-get install pandoc texlive-xetex inkscape
-      - run: python -m nbconvert --to pdf --execute lab_03/advection_upwind.ipynb
+      - run: python -m nbconvert --to pdf --execute lab_04/lab_04.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: lab_03/advection_upwind.pdf
+          path: lab_04/lab_04.pdf
