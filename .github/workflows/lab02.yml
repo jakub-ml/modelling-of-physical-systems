@@ -1,4 +1,4 @@
-name: lab_05
+name: lab_06
 on: push
 jobs:
   test:
@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v4
       - run: sudo apt-get update
       - run: sudo apt-get install pandoc texlive-xetex inkscape
-      - run: python -m nbconvert --to pdf --execute lab_05/lab5.ipynb
+      - run: python -m nbconvert --to pdf --execute lab_06/assigment06_2.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: lab_05/lab5.pdf
+          path: lab_06/lab6.pdf
