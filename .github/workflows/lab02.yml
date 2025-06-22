@@ -4,8 +4,13 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Python 3.12.4
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12.4'
+
       - run: echo Hello
-      - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils seaborn numpy == 1.26.4
+      - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils seaborn numpy
       - uses: actions/checkout@v4
       - run: sudo apt-get update
       - run: sudo apt-get install pandoc texlive-xetex inkscape
