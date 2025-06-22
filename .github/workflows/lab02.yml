@@ -12,4 +12,4 @@ jobs:
       - run: python -m nbconvert --to pdf --execute lab_06/assigment06_2.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: lab_06/assigment06_2.pdf
+          path: lab_06/lab6.pdf
