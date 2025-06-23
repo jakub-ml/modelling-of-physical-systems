@@ -10,7 +10,7 @@ jobs:
           python-version: '3.12.4'
 
       - run: echo Hello
-      - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils seaborn numpy
+      - run: pip install nbconvert pint matplotlib scipy ipykernel open-atmos-jupyter-utils seaborn numpy numba
       - uses: actions/checkout@v4
       - run: sudo apt-get update
       - run: sudo apt-get install pandoc texlive-xetex inkscape
